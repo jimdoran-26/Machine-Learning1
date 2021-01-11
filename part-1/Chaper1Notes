@@ -1,0 +1,158 @@
+**Fundamentals of Machine Learning**
+
+* Giving computers the ability to learn without being explicitly programmed
+
+* Learn from experience E with respect to some task T and some performance measure P
+
+    * Performance on T, measured by P, improves with experience E
+
+    * ![image alt text](image_0.png)
+
+    * ![image alt text](image_1.png)
+
+    * ![image alt text](image_2.png)
+
+* Applying ML techniques to dig into large amounts of data can help discover patterns
+
+**Types of Machine Learning**
+
+* Trained with human supervision or not
+
+* Whether or not can learn incrementally on the fly
+
+* Whether they work by comparing new data points to known data, or detect pattern in training data and build predictive model
+
+**Supervised/Unsupervised Learning**
+
+* Supervised Learning
+
+    * Training data includes desired solutions
+
+    * ![image alt text](image_3.png)
+
+    * Classification
+
+    * Predict target numeric value such as price of car given factors
+
+        * Regression
+
+        * Logistic Regression, k-Nearest neighbors Logistic regression, Support Vector Machine (SVM), decision trees/random forests, neural networks
+
+* Unsupervised Learning
+
+    * Training data unlabeled
+
+    * ![image alt text](image_4.png)
+
+    * Clustering, anomaly detection, visualization and dimensionality reduction, association rule learning
+
+    * Association rule learning example people buying steak and chips buy BBQ sauce, so put 3 of them next to each other in store
+
+* Semi Supervised Learning
+
+    * Partially labelled data
+
+    * Example google photos recognize and group faces together, just need user to label one face and can label all of them w that face
+
+    * ![image alt text](image_5.png)
+
+* Reinforcement Learning
+
+    * Learning system = agent
+
+        * Can observe environment, select perform actions, get rewards
+
+    * ![image alt text](image_6.png)
+
+**Batch and Online Learning**
+
+* Batch Learning
+
+    * System incapable of learning incrementally, mst be trained using all available data
+
+        * Training is done offline in one step, then launched into production and runs without training
+
+    * ![image alt text](image_7.png)
+
+* Online Learning
+
+    * Feed data instances sequentially in individuals or mini batches
+
+    * Can discard old resources unless want to rollback
+
+    * Can train systems on huge datasets that can’t fit on one machine’s memory = out of core learning
+
+    * ![image alt text](image_8.png)
+
+    * Learning rate = how fast should adapt to changing data
+
+        * Set high learning rate, will rapidly adapt new data, but forget old quickly
+
+        * Low learning rate will lead to some inertia, but less sensitive to noise
+
+**Instance Based vs Model Based Learning**
+
+* Instance Based
+
+    * ![image alt text](image_9.png)
+
+    * Measure of similarity between instances
+
+* Model Based
+
+    * Build model and then make predictions
+
+    * ![image alt text](image_10.png)
+
+    * ![image alt text](image_11.png)
+
+    * Can define utility function to measure how good model is
+
+    * Cost function that measures how bad it is, example distance between predictions and training samples, trying to minimize distance
+
+**Nonrepresentative Training Data**
+
+* Use training set representative of the cases you want to generalize
+
+**Poor-Quality Data**
+
+* Errors, outliers, noise, will lead to less performance
+
+* Clean data
+
+**Irrelevant Features**
+
+* Feature selection = choosing useful features
+
+* Feature extraction = combining features to produce a more useful one
+
+**Overfitting Training Data**
+
+* Regularization = constraining model to make simpler and reduce risk of overfitting
+
+* Hyperparameter = amount of regularization to apply during learning
+
+**Underfitting Training Data**
+
+* To fix, select more powerful model with more parameters, feeding better features, reduce constraints
+
+**Testing and Validating**
+
+* Split into training set and test set
+
+* Error rate on new cases = generalization error
+
+    * Out of sample error
+
+**Hyperparameter Tuning and Model Selection**
+
+* Holdout validation = hold out part of training set to evaluate several different models
+
+* New heldout set is validation set
+
+* Repeated cross validation using many small validation sets 
+
+**Data Mismatch**
+
+* Data you use for training is different than that for testing/production
+
